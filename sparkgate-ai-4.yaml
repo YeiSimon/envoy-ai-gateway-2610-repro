@@ -1,0 +1,131 @@
+apiVersion: aigateway.envoyproxy.io/v1beta1
+kind: AIGatewayRoute
+metadata:
+  creationTimestamp: "2026-09-01T10:23:47Z"
+  finalizers:
+  - aigateway.envoyproxy.io/finalizer
+  generation: 18
+  labels:
+    sparkgate.dev/managed-by: envoy-crd-sync
+  name: sparkgate-ai-4
+  namespace: sparkgate-loadtest
+  resourceVersion: "3287582"
+  uid: d2dfe7f0-c3f9-42eb-8034-c04b542a1e63
+spec:
+  llmRequestCosts:
+  - metadataKey: llm_input_token
+    type: InputToken
+  - metadataKey: llm_output_token
+    type: OutputToken
+  - metadataKey: llm_total_token
+    type: TotalToken
+  parentRefs:
+  - group: gateway.networking.k8s.io
+    kind: Gateway
+    name: sparkgate-loadtest-sparkgate-ai
+  rules:
+  - backendRefs:
+    - name: pgk-geyec5krjzudqubzor4vmtsdmv5her3ql4
+      priority: 0
+      weight: 1
+    - name: pgk-irgecyksiv2gollwjjtdm3rupfxgw22cgm
+      priority: 1
+      weight: 1
+    - name: pgk-kfzg44kfm5xw2x2ugvkfs3zuojzfa5sniy
+      priority: 2
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: mock-mix-b
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: mock-mix-b-0c10d6b3
+    timeouts:
+      request: 120s
+  - backendRefs:
+    - name: pgk-geyec5krjzudqubzor4vmtsdmv5her3ql4
+      priority: 0
+      weight: 1
+    - name: pgk-irgecyksiv2gollwjjtdm3rupfxgw22cgm
+      priority: 1
+      weight: 1
+    - name: pgk-kfzg44kfm5xw2x2ugvkfs3zuojzfa5sniy
+      priority: 2
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: mock-mix-c
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: mock-mix-c-0c10d6b4
+    timeouts:
+      request: 120s
+  - backendRefs:
+    - name: pgk-geyec5krjzudqubzor4vmtsdmv5her3ql4
+      priority: 0
+      weight: 1
+    - name: pgk-irgecyksiv2gollwjjtdm3rupfxgw22cgm
+      priority: 1
+      weight: 1
+    - name: pgk-kfzg44kfm5xw2x2ugvkfs3zuojzfa5sniy
+      priority: 2
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: mock-router-test
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: mock-router-test-a9f7eee4
+    timeouts:
+      request: 120s
+  - backendRefs:
+    - name: pgk-ozve2wlrl5xxkmlinn3vmwselbwvmusfni
+      priority: 0
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: muse-glimmer
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: muse-glimmer
+    timeouts:
+      request: 120s
+  - backendRefs:
+    - name: pgk-ozve2wlrl5xxkmlinn3vmwselbwvmusfni
+      priority: 0
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: o4-mini
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: o4-mini
+    timeouts:
+      request: 120s
+status:
+  conditions:
+  - lastTransitionTime: "2026-09-02T18:12:27Z"
+    message: AI Gateway Route reconciled successfully
+    reason: ReconciliationSucceeded
+    status: "True"
+    type: Accepted

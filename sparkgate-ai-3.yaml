@@ -1,0 +1,263 @@
+apiVersion: aigateway.envoyproxy.io/v1beta1
+kind: AIGatewayRoute
+metadata:
+  creationTimestamp: "2026-09-01T04:51:35Z"
+  finalizers:
+  - aigateway.envoyproxy.io/finalizer
+  generation: 115
+  labels:
+    sparkgate.dev/managed-by: envoy-crd-sync
+  name: sparkgate-ai-3
+  namespace: sparkgate-loadtest
+  resourceVersion: "3287576"
+  uid: 17757b91-fdb1-46f2-9bf7-5a1eafc692bc
+spec:
+  llmRequestCosts:
+  - metadataKey: llm_input_token
+    type: InputToken
+  - metadataKey: llm_output_token
+    type: OutputToken
+  - metadataKey: llm_total_token
+    type: TotalToken
+  parentRefs:
+  - group: gateway.networking.k8s.io
+    kind: Gateway
+    name: sparkgate-loadtest-sparkgate-ai
+  rules:
+  - backendRefs:
+    - name: pgk-lfxho4dsnrdhqyllmfjeyu2sirbgs6sone
+      priority: 0
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: claude-haiku-4-5-20251001
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: claude-haiku-4-5-20251001
+    timeouts:
+      request: 120s
+  - backendRefs:
+    - name: pgk-lfxho4dsnrdhqyllmfjeyu2sirbgs6sone
+      priority: 0
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: claude-opus-4-1-20250805
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: claude-opus-4-1-20250805
+    timeouts:
+      request: 120s
+  - backendRefs:
+    - name: pgk-lfxho4dsnrdhqyllmfjeyu2sirbgs6sone
+      priority: 0
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: claude-opus-4-20250514
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: claude-opus-4-20250514
+    timeouts:
+      request: 120s
+  - backendRefs:
+    - name: pgk-lfxho4dsnrdhqyllmfjeyu2sirbgs6sone
+      priority: 0
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: claude-sonnet-4-20250514
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: claude-sonnet-4-20250514
+    timeouts:
+      request: 120s
+  - backendRefs:
+    - name: pgk-lfxho4dsnrdhqyllmfjeyu2sirbgs6sone
+      priority: 0
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: claude-sonnet-4-5-20250929
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: claude-sonnet-4-5-20250929
+    timeouts:
+      request: 120s
+  - backendRefs:
+    - name: pgk-fvytqx2jiflucmbykzje4rsvk5mfoudila
+      priority: 0
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: global.anthropic.claude-sonnet-4-6
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: global-anthropic-claude-sonnet-4-6
+    timeouts:
+      request: 120s
+  - backendRefs:
+    - name: pgk-ozve2wlrl5xxkmlinn3vmwselbwvmusfni
+      priority: 0
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: gpt-4.1
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: gpt-4-1
+    timeouts:
+      request: 120s
+  - backendRefs:
+    - name: pgk-ozve2wlrl5xxkmlinn3vmwselbwvmusfni
+      priority: 0
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: gpt-4.1-mini
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: gpt-4-1-mini
+    timeouts:
+      request: 120s
+  - backendRefs:
+    - name: pgk-ozve2wlrl5xxkmlinn3vmwselbwvmusfni
+      priority: 0
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: gpt-4.1-nano
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: gpt-4-1-nano
+    timeouts:
+      request: 120s
+  - backendRefs:
+    - name: pgk-ozve2wlrl5xxkmlinn3vmwselbwvmusfni
+      priority: 0
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: gpt-4o
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: gpt-4o
+    timeouts:
+      request: 120s
+  - backendRefs:
+    - name: pgk-ozve2wlrl5xxkmlinn3vmwselbwvmusfni
+      priority: 0
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: gpt-4o-mini
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: gpt-4o-mini
+    timeouts:
+      request: 120s
+  - backendRefs:
+    - name: pgk-geyec5krjzudqubzor4vmtsdmv5her3ql4
+      priority: 0
+      weight: 1
+    - name: pgk-irgecyksiv2gollwjjtdm3rupfxgw22cgm
+      priority: 1
+      weight: 1
+    - name: pgk-kfzg44kfm5xw2x2ugvkfs3zuojzfa5sniy
+      priority: 2
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: gpt-oss:20b
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: gpt-oss-20b-dd71938a
+    timeouts:
+      request: 120s
+  - backendRefs:
+    - name: pgk-lfxho4dsnrdhqyllmfjeyu2sirbgs6sone
+      priority: 0
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: mock-anthropic
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: mock-anthropic
+    timeouts:
+      request: 120s
+  - backendRefs:
+    - name: pgk-fvytqx2jiflucmbykzje4rsvk5mfoudila
+      priority: 0
+      weight: 1
+    matches:
+    - headers:
+      - name: x-ai-eg-model
+        type: Exact
+        value: mock-bedrock
+      - name: x-sparkgate-org-id
+        type: Exact
+        value: stbXLpWlUO3n52ABYK_2V
+    modelsOwnedBy: Envoy AI Gateway
+    name: mock-bedrock
+    timeouts:
+      request: 120s
+status:
+  conditions:
+  - lastTransitionTime: "2026-09-02T18:12:27Z"
+    message: AI Gateway Route reconciled successfully
+    reason: ReconciliationSucceeded
+    status: "True"
+    type: Accepted

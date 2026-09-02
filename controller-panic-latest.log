@@ -1,0 +1,261 @@
+2026-09-02T18:11:08Z	INFO	setup	configuring kubernetes cache	{"watch-namespaces": [], "sync-timeout": "2m0s"}
+2026/09/02 18:11:08 starting pprof server on port 6060
+2026-09-02T18:11:08Z	INFO	ratelimit-xds-runner	starting rate limit xDS config server	{"address": "0.0.0.0:18002"}
+2026-09-02T18:11:08Z	INFO	controller	InferencePool CRD not found, skipping InferencePool controller. If you need it, please install the Gateway API Inference Extension CRDs.
+2026-09-02T18:11:08Z	INFO	controller-runtime.webhook	Registering webhook	{"path": "/mutate"}
+2026-09-02T18:11:08Z	INFO	controller-runtime.metrics	Starting metrics server
+2026-09-02T18:11:08Z	INFO	controller-runtime.webhook	Starting webhook server
+2026-09-02T18:11:08Z	INFO	controller-runtime.metrics	Serving metrics server	{"bindAddress": ":8080", "secure": false}
+2026-09-02T18:11:08Z	INFO	controller-runtime.certwatcher	Updated current TLS certificate	{"cert": "/certs/tls.crt", "key": "/certs/tls.key"}
+2026-09-02T18:11:08Z	INFO	controller-runtime.webhook	Serving webhook server	{"host": "", "port": 9443}
+2026-09-02T18:11:08Z	INFO	controller-runtime.certwatcher	Starting certificate poll+watcher	{"cert": "/certs/tls.crt", "key": "/certs/tls.key", "interval": "10s"}
+I0902 18:11:08.880376       1 leaderelection.go:258] "Attempting to acquire leader lease..." lock="envoy-ai-gateway-system/envoy-ai-gateway-controller"
+I0902 18:11:24.791278       1 leaderelection.go:272] "Successfully acquired lease" lock="envoy-ai-gateway-system/envoy-ai-gateway-controller"
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "gateway", "controllerGroup": "gateway.networking.k8s.io", "controllerKind": "Gateway", "source": "channel source: 0x2ce9bf1281c0"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "aiservicebackend", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "AIServiceBackend", "source": "kind source: *v1beta1.AIServiceBackend"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "aiservicebackend", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "AIServiceBackend", "source": "channel source: 0x2ce9bf1285b0"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "gateway", "controllerGroup": "gateway.networking.k8s.io", "controllerKind": "Gateway", "source": "kind source: *v1.Gateway"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "mcproute", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "MCPRoute", "source": "kind source: *v1.HTTPRoute"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "aigatewayroute", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "AIGatewayRoute", "source": "channel source: 0x2ce9bf128460"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "mcproute", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "MCPRoute", "source": "channel source: 0x2ce9bf04a690"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "aigatewayroute", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "AIGatewayRoute", "source": "kind source: *v1beta1.AIGatewayRoute"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "quotapolicy", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "QuotaPolicy", "source": "kind source: *v1beta1.AIServiceBackend"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "quotapolicy", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "QuotaPolicy", "source": "kind source: *v1alpha1.QuotaPolicy"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "aigatewayroute", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "AIGatewayRoute", "source": "kind source: *v1.HTTPRoute"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "aigatewayroute", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "AIGatewayRoute", "source": "kind source: *v1alpha1.HTTPRouteFilter"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "mcproute", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "MCPRoute", "source": "kind source: *v1beta1.MCPRoute"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "referencegrant", "controllerGroup": "gateway.networking.k8s.io", "controllerKind": "ReferenceGrant", "source": "kind source: *v1beta1.ReferenceGrant"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "secret", "controllerGroup": "", "controllerKind": "Secret", "source": "kind source: *v1.Secret"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "gatewayconfig", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "GatewayConfig", "source": "kind source: *v1beta1.GatewayConfig"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "backendsecuritypolicy", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "BackendSecurityPolicy", "source": "channel source: 0x2ce9bf128770"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "backendsecuritypolicy", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "BackendSecurityPolicy", "source": "kind source: *v1.Secret"}
+2026-09-02T18:11:24Z	INFO	Starting EventSource	{"controller": "backendsecuritypolicy", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "BackendSecurityPolicy", "source": "kind source: *v1beta1.BackendSecurityPolicy"}
+2026-09-02T18:11:24Z	INFO	Starting Controller	{"controller": "referencegrant", "controllerGroup": "gateway.networking.k8s.io", "controllerKind": "ReferenceGrant"}
+2026-09-02T18:11:24Z	INFO	Starting workers	{"controller": "referencegrant", "controllerGroup": "gateway.networking.k8s.io", "controllerKind": "ReferenceGrant", "worker count": 1}
+2026-09-02T18:11:24Z	INFO	Starting Controller	{"controller": "gateway", "controllerGroup": "gateway.networking.k8s.io", "controllerKind": "Gateway"}
+2026-09-02T18:11:24Z	INFO	Starting workers	{"controller": "gateway", "controllerGroup": "gateway.networking.k8s.io", "controllerKind": "Gateway", "worker count": 1}
+2026-09-02T18:11:24Z	INFO	Starting Controller	{"controller": "mcproute", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "MCPRoute"}
+2026-09-02T18:11:24Z	INFO	Starting workers	{"controller": "mcproute", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "MCPRoute", "worker count": 1}
+2026-09-02T18:11:24Z	INFO	controller.gateway	annotating pod	{"namespace": "envoy-gateway-system", "name": "envoy-sparkgate-loadtest-sparkgate-loadtest-gateway-0e2ca2dc5nh"}
+2026-09-02T18:11:24Z	INFO	Starting Controller	{"controller": "quotapolicy", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "QuotaPolicy"}
+2026-09-02T18:11:24Z	INFO	Starting workers	{"controller": "quotapolicy", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "QuotaPolicy", "worker count": 1}
+2026-09-02T18:11:24Z	INFO	Starting Controller	{"controller": "aiservicebackend", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "AIServiceBackend"}
+2026-09-02T18:11:24Z	INFO	Starting workers	{"controller": "aiservicebackend", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "AIServiceBackend", "worker count": 1}
+2026-09-02T18:11:24Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-geyec5krjzudqubzor4vmtsdmv5her3ql4"}
+2026-09-02T18:11:24Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-4", "referenced_backend": "pgk-geyec5krjzudqubzor4vmtsdmv5her3ql4", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:24Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-3", "referenced_backend": "pgk-geyec5krjzudqubzor4vmtsdmv5her3ql4", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:24Z	INFO	Starting Controller	{"controller": "aigatewayroute", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "AIGatewayRoute"}
+2026-09-02T18:11:24Z	INFO	Starting workers	{"controller": "aigatewayroute", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "AIGatewayRoute", "worker count": 1}
+2026-09-02T18:11:24Z	INFO	Starting Controller	{"controller": "gatewayconfig", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "GatewayConfig"}
+2026-09-02T18:11:24Z	INFO	Starting Controller	{"controller": "secret", "controllerGroup": "", "controllerKind": "Secret"}
+2026-09-02T18:11:24Z	INFO	Starting workers	{"controller": "secret", "controllerGroup": "", "controllerKind": "Secret", "worker count": 1}
+2026-09-02T18:11:24Z	INFO	Starting workers	{"controller": "gatewayconfig", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "GatewayConfig", "worker count": 1}
+2026-09-02T18:11:24Z	INFO	Starting Controller	{"controller": "backendsecuritypolicy", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "BackendSecurityPolicy"}
+2026-09-02T18:11:24Z	INFO	controller.ai-gateway-route	Reconciling AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-4"}
+2026-09-02T18:11:24Z	INFO	Starting workers	{"controller": "backendsecuritypolicy", "controllerGroup": "aigateway.envoyproxy.io", "controllerKind": "BackendSecurityPolicy", "worker count": 1}
+2026-09-02T18:11:24Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "sparkgate-loadtest-gateway-sparkgate-loadtest-0e2ca2ed520d-part-000"}
+2026-09-02T18:11:24Z	INFO	controller.ai-gateway-route	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-4"}
+2026-09-02T18:11:24Z	INFO	controller.backend-security-policy	Reconciling backend security policy	{"namespace": "sparkgate-loadtest", "name": "pgk-kfzg44kfm5xw2x2ugvkfs3zuojzfa5sniy"}
+2026-09-02T18:11:24Z	INFO	controller.backend-security-policy	Syncing AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-kfzg44kfm5xw2x2ugvkfs3zuojzfa5sniy"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "sparkgate-loadtest-gateway-sparkgate-loadtest-0e2ca2ed520d"}
+2026-09-02T18:11:24Z	INFO	controller.ai-gateway-route	updating HTTPRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-4"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "sparkgate-loadtest-gateway-sparkgate-loadtest"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "pgk-kfzg44kfm5xw2x2ugvkfs3zuojzfa5sniy-credential"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Syncing BackendSecurityPolicy	{"namespace": "sparkgate-loadtest", "name": "pgk-kfzg44kfm5xw2x2ugvkfs3zuojzfa5sniy"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "sparkgate-loadtest-sparkgate-ai-sparkgate-loadtest-96b8b9d643e9-part-000"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "pgk-fvytqx2jiflucmbykzje4rsvk5mfoudila-credential"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Syncing BackendSecurityPolicy	{"namespace": "sparkgate-loadtest", "name": "pgk-fvytqx2jiflucmbykzje4rsvk5mfoudila"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-ai-gateway-system", "name": "sh.helm.release.v1.aieg-crd.v1"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-ai-gateway-system", "name": "self-signed-cert-for-mutating-webhook"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "envoy-rate-limit"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "sh.helm.release.v1.sparkgate-loadtest.v137"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Reconciling Secret	{"namespace": "kube-system", "name": "cilium-ca"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "pgk-ijsg2wkjoizdm3lvgvye4wrzjrseets2pi-credential"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Syncing BackendSecurityPolicy	{"namespace": "sparkgate-loadtest", "name": "pgk-ijsg2wkjoizdm3lvgvye4wrzjrseets2pi"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "pgk-kztewn2rovefqss2iyyvur2hhfbgsojynu-credential"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Syncing BackendSecurityPolicy	{"namespace": "sparkgate-loadtest", "name": "pgk-kztewn2rovefqss2iyyvur2hhfbgsojynu"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "envoy-oidc-hmac"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "pgk-ivhwuvktonavg23novixutllnrvwqv3tke-credential"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Syncing BackendSecurityPolicy	{"namespace": "sparkgate-loadtest", "name": "pgk-ivhwuvktonavg23novixutllnrvwqv3tke"}
+2026-09-02T18:11:24Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "pgk-j43wevkyny2g6vscmz2ecttpm5pukvsvpa-credential"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Syncing BackendSecurityPolicy	{"namespace": "sparkgate-loadtest", "name": "pgk-j43wevkyny2g6vscmz2ecttpm5pukvsvpa"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-kfzg44kfm5xw2x2ugvkfs3zuojzfa5sniy"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "sparkgate-loadtest-sparkgate-ai-sparkgate-loadtest-96b8b9d643e9"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "sh.helm.release.v1.eg.v2"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "sh.helm.release.v1.sparkgate-loadtest.v142"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-3", "referenced_backend": "pgk-kfzg44kfm5xw2x2ugvkfs3zuojzfa5sniy", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-ai-gateway-system", "name": "sh.helm.release.v1.aieg.v1"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-4", "referenced_backend": "pgk-kfzg44kfm5xw2x2ugvkfs3zuojzfa5sniy", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "envoy"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "kube-system", "name": "sh.helm.release.v1.cilium.v2"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "pgk-orihumbufuzgkv2bpawxmu2qknuviwrzou-credential"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Syncing BackendSecurityPolicy	{"namespace": "sparkgate-loadtest", "name": "pgk-orihumbufuzgkv2bpawxmu2qknuviwrzou"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "pgk-pbquqvdtm5cu2wlcpfmek4kqg5vgi5drme-credential"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Syncing BackendSecurityPolicy	{"namespace": "sparkgate-loadtest", "name": "pgk-pbquqvdtm5cu2wlcpfmek4kqg5vgi5drme"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "pgk-irgecyksiv2gollwjjtdm3rupfxgw22cgm-credential"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Syncing BackendSecurityPolicy	{"namespace": "sparkgate-loadtest", "name": "pgk-irgecyksiv2gollwjjtdm3rupfxgw22cgm"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "sh.helm.release.v1.sparkgate-loadtest.v134"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "kube-system", "name": "sh.helm.release.v1.cilium.v4"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "sparkgate-loadtest-secrets"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "sh.helm.release.v1.eg.v1"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "pgk-jz3ueok2jfcwkrslgjzf63jufvbdk2kngq-credential"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Syncing BackendSecurityPolicy	{"namespace": "sparkgate-loadtest", "name": "pgk-jz3ueok2jfcwkrslgjzf63jufvbdk2kngq"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Reconciling backend security policy	{"namespace": "sparkgate-loadtest", "name": "pgk-kfzg44kfm5xw2x2ugvkfs3zuojzfa5sniy"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Syncing AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-kfzg44kfm5xw2x2ugvkfs3zuojzfa5sniy"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "sh.helm.release.v1.sparkgate-loadtest.v138"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "sh.helm.release.v1.sparkgate-loadtest.v139"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "sh.helm.release.v1.sparkgate-loadtest.v136"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "sh.helm.release.v1.sparkgate-loadtest.v133"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "kube-system", "name": "sh.helm.release.v1.cilium.v1"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "kube-system", "name": "sh.helm.release.v1.cilium.v3"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "pgk-ha2c2uzsivndkwchmr4fgvkinjxuytklg4-credential"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Syncing BackendSecurityPolicy	{"namespace": "sparkgate-loadtest", "name": "pgk-ha2c2uzsivndkwchmr4fgvkinjxuytklg4"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "pgk-ozve2wlrl5xxkmlinn3vmwselbwvmusfni-credential"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Syncing BackendSecurityPolicy	{"namespace": "sparkgate-loadtest", "name": "pgk-ozve2wlrl5xxkmlinn3vmwselbwvmusfni"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "sh.helm.release.v1.sparkgate-loadtest.v135"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "kube-system", "name": "hubble-server-certs"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "envoy-gateway"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "pgk-lfxho4dsnrdhqyllmfjeyu2sirbgs6sone-credential"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Syncing BackendSecurityPolicy	{"namespace": "sparkgate-loadtest", "name": "pgk-lfxho4dsnrdhqyllmfjeyu2sirbgs6sone"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "pgk-jvsgcy3xhbwtk22rnvauioduj4yg4okthe-credential"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Syncing BackendSecurityPolicy	{"namespace": "sparkgate-loadtest", "name": "pgk-jvsgcy3xhbwtk22rnvauioduj4yg4okthe"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-kfzg44kfm5xw2x2ugvkfs3zuojzfa5sniy"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "sparkgate-loadtest-sparkgate-ai-sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "sh.helm.release.v1.sparkgate-loadtest.v140"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-4", "referenced_backend": "pgk-kfzg44kfm5xw2x2ugvkfs3zuojzfa5sniy", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-3", "referenced_backend": "pgk-kfzg44kfm5xw2x2ugvkfs3zuojzfa5sniy", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "pgk-iyytmolnnb4xi5stgvlus6tqgjcf6n2zn4-credential"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Syncing BackendSecurityPolicy	{"namespace": "sparkgate-loadtest", "name": "pgk-iyytmolnnb4xi5stgvlus6tqgjcf6n2zn4"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "pgk-geyec5krjzudqubzor4vmtsdmv5her3ql4-credential"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Syncing BackendSecurityPolicy	{"namespace": "sparkgate-loadtest", "name": "pgk-geyec5krjzudqubzor4vmtsdmv5her3ql4"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "sparkgate-loadtest", "name": "sh.helm.release.v1.sparkgate-loadtest.v141"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	syncing Gateway	{"namespace": "sparkgate-loadtest", "name": "sparkgate-loadtest-sparkgate-ai"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Reconciling backend security policy	{"namespace": "sparkgate-loadtest", "name": "pgk-fvytqx2jiflucmbykzje4rsvk5mfoudila"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Syncing AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-fvytqx2jiflucmbykzje4rsvk5mfoudila"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-fvytqx2jiflucmbykzje4rsvk5mfoudila"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-3", "referenced_backend": "pgk-fvytqx2jiflucmbykzje4rsvk5mfoudila", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-ijsg2wkjoizdm3lvgvye4wrzjrseets2pi"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-0", "referenced_backend": "pgk-ijsg2wkjoizdm3lvgvye4wrzjrseets2pi", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-1", "referenced_backend": "pgk-ijsg2wkjoizdm3lvgvye4wrzjrseets2pi", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Reconciling backend security policy	{"namespace": "sparkgate-loadtest", "name": "pgk-ijsg2wkjoizdm3lvgvye4wrzjrseets2pi"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Syncing AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-ijsg2wkjoizdm3lvgvye4wrzjrseets2pi"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	Reconciling AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-3"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-3"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	updating HTTPRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-3"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Reconciling backend security policy	{"namespace": "sparkgate-loadtest", "name": "pgk-kztewn2rovefqss2iyyvur2hhfbgsojynu"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Syncing AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-kztewn2rovefqss2iyyvur2hhfbgsojynu"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-ijsg2wkjoizdm3lvgvye4wrzjrseets2pi"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-0", "referenced_backend": "pgk-ijsg2wkjoizdm3lvgvye4wrzjrseets2pi", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-1", "referenced_backend": "pgk-ijsg2wkjoizdm3lvgvye4wrzjrseets2pi", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-kztewn2rovefqss2iyyvur2hhfbgsojynu"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-1", "referenced_backend": "pgk-kztewn2rovefqss2iyyvur2hhfbgsojynu", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Reconciling backend security policy	{"namespace": "sparkgate-loadtest", "name": "pgk-ivhwuvktonavg23novixutllnrvwqv3tke"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Syncing AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-ivhwuvktonavg23novixutllnrvwqv3tke"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-ivhwuvktonavg23novixutllnrvwqv3tke"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-2", "referenced_backend": "pgk-ivhwuvktonavg23novixutllnrvwqv3tke", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Reconciling backend security policy	{"namespace": "sparkgate-loadtest", "name": "pgk-j43wevkyny2g6vscmz2ecttpm5pukvsvpa"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Syncing AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-j43wevkyny2g6vscmz2ecttpm5pukvsvpa"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-j43wevkyny2g6vscmz2ecttpm5pukvsvpa"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-0", "referenced_backend": "pgk-j43wevkyny2g6vscmz2ecttpm5pukvsvpa", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Reconciling backend security policy	{"namespace": "sparkgate-loadtest", "name": "pgk-orihumbufuzgkv2bpawxmu2qknuviwrzou"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Syncing AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-orihumbufuzgkv2bpawxmu2qknuviwrzou"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-orihumbufuzgkv2bpawxmu2qknuviwrzou"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-1", "referenced_backend": "pgk-orihumbufuzgkv2bpawxmu2qknuviwrzou", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Reconciling backend security policy	{"namespace": "sparkgate-loadtest", "name": "pgk-pbquqvdtm5cu2wlcpfmek4kqg5vgi5drme"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Syncing AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-pbquqvdtm5cu2wlcpfmek4kqg5vgi5drme"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-pbquqvdtm5cu2wlcpfmek4kqg5vgi5drme"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-2", "referenced_backend": "pgk-pbquqvdtm5cu2wlcpfmek4kqg5vgi5drme", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	syncing Gateway	{"namespace": "sparkgate-loadtest", "name": "sparkgate-loadtest-sparkgate-ai"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Reconciling backend security policy	{"namespace": "sparkgate-loadtest", "name": "pgk-irgecyksiv2gollwjjtdm3rupfxgw22cgm"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Syncing AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-irgecyksiv2gollwjjtdm3rupfxgw22cgm"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-irgecyksiv2gollwjjtdm3rupfxgw22cgm"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-4", "referenced_backend": "pgk-irgecyksiv2gollwjjtdm3rupfxgw22cgm", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-3", "referenced_backend": "pgk-irgecyksiv2gollwjjtdm3rupfxgw22cgm", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Reconciling backend security policy	{"namespace": "sparkgate-loadtest", "name": "pgk-jz3ueok2jfcwkrslgjzf63jufvbdk2kngq"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Syncing AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-jz3ueok2jfcwkrslgjzf63jufvbdk2kngq"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-jz3ueok2jfcwkrslgjzf63jufvbdk2kngq"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-2", "referenced_backend": "pgk-jz3ueok2jfcwkrslgjzf63jufvbdk2kngq", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Reconciling backend security policy	{"namespace": "sparkgate-loadtest", "name": "pgk-ha2c2uzsivndkwchmr4fgvkinjxuytklg4"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Syncing AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-ha2c2uzsivndkwchmr4fgvkinjxuytklg4"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-ha2c2uzsivndkwchmr4fgvkinjxuytklg4"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-0", "referenced_backend": "pgk-ha2c2uzsivndkwchmr4fgvkinjxuytklg4", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	Reconciling AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-4"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-4"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	updating HTTPRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-4"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Reconciling backend security policy	{"namespace": "sparkgate-loadtest", "name": "pgk-ozve2wlrl5xxkmlinn3vmwselbwvmusfni"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Syncing AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-ozve2wlrl5xxkmlinn3vmwselbwvmusfni"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-lfxho4dsnrdhqyllmfjeyu2sirbgs6sone"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-2", "referenced_backend": "pgk-lfxho4dsnrdhqyllmfjeyu2sirbgs6sone", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-3", "referenced_backend": "pgk-lfxho4dsnrdhqyllmfjeyu2sirbgs6sone", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-ozve2wlrl5xxkmlinn3vmwselbwvmusfni"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-4", "referenced_backend": "pgk-ozve2wlrl5xxkmlinn3vmwselbwvmusfni", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-3", "referenced_backend": "pgk-ozve2wlrl5xxkmlinn3vmwselbwvmusfni", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Reconciling backend security policy	{"namespace": "sparkgate-loadtest", "name": "pgk-lfxho4dsnrdhqyllmfjeyu2sirbgs6sone"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Syncing AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-lfxho4dsnrdhqyllmfjeyu2sirbgs6sone"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-lfxho4dsnrdhqyllmfjeyu2sirbgs6sone"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Reconciling backend security policy	{"namespace": "sparkgate-loadtest", "name": "pgk-jvsgcy3xhbwtk22rnvauioduj4yg4okthe"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Syncing AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-jvsgcy3xhbwtk22rnvauioduj4yg4okthe"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-2", "referenced_backend": "pgk-lfxho4dsnrdhqyllmfjeyu2sirbgs6sone", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-3", "referenced_backend": "pgk-lfxho4dsnrdhqyllmfjeyu2sirbgs6sone", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	syncing Gateway	{"namespace": "sparkgate-loadtest", "name": "sparkgate-loadtest-sparkgate-ai"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Reconciling backend security policy	{"namespace": "sparkgate-loadtest", "name": "pgk-iyytmolnnb4xi5stgvlus6tqgjcf6n2zn4"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Syncing AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-iyytmolnnb4xi5stgvlus6tqgjcf6n2zn4"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-jvsgcy3xhbwtk22rnvauioduj4yg4okthe"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-0", "referenced_backend": "pgk-jvsgcy3xhbwtk22rnvauioduj4yg4okthe", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-iyytmolnnb4xi5stgvlus6tqgjcf6n2zn4"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-1", "referenced_backend": "pgk-iyytmolnnb4xi5stgvlus6tqgjcf6n2zn4", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Reconciling backend security policy	{"namespace": "sparkgate-loadtest", "name": "pgk-geyec5krjzudqubzor4vmtsdmv5her3ql4"}
+2026-09-02T18:11:25Z	INFO	controller.backend-security-policy	Syncing AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-geyec5krjzudqubzor4vmtsdmv5her3ql4"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	Reconciling AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-0"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-0"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	updating HTTPRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-0"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "sparkgate-loadtest-sparkgate-ai-sparkgate-loadtest-96b8b9d643e9-part-000"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	Reconciling AIServiceBackend	{"namespace": "sparkgate-loadtest", "name": "pgk-geyec5krjzudqubzor4vmtsdmv5her3ql4"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-3", "referenced_backend": "pgk-geyec5krjzudqubzor4vmtsdmv5her3ql4", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.ai-service-backend	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-4", "referenced_backend": "pgk-geyec5krjzudqubzor4vmtsdmv5her3ql4", "referenced_backend_namespace": "sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "sparkgate-loadtest-sparkgate-ai-sparkgate-loadtest-96b8b9d643e9"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	syncing Gateway	{"namespace": "sparkgate-loadtest", "name": "sparkgate-loadtest-sparkgate-ai"}
+2026-09-02T18:11:25Z	INFO	controller.gateway	annotating pod	{"namespace": "envoy-gateway-system", "name": "envoy-sparkgate-loadtest-sparkgate-loadtest-sparkgate-96b8nsfzs"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "sparkgate-loadtest-sparkgate-ai-sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	Reconciling AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-1"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-1"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	updating HTTPRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-1"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	syncing Gateway	{"namespace": "sparkgate-loadtest", "name": "sparkgate-loadtest-sparkgate-ai"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	Reconciling AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-2"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-2"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	updating HTTPRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-2"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	syncing Gateway	{"namespace": "sparkgate-loadtest", "name": "sparkgate-loadtest-sparkgate-ai"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	Reconciling AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-3"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-3"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	updating HTTPRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-3"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	syncing Gateway	{"namespace": "sparkgate-loadtest", "name": "sparkgate-loadtest-sparkgate-ai"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	Reconciling AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-4"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	syncing AIGatewayRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-4"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	updating HTTPRoute	{"namespace": "sparkgate-loadtest", "name": "sparkgate-ai-4"}
+2026-09-02T18:11:25Z	INFO	controller.ai-gateway-route	syncing Gateway	{"namespace": "sparkgate-loadtest", "name": "sparkgate-loadtest-sparkgate-ai"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "sparkgate-loadtest-sparkgate-ai-sparkgate-loadtest-96b8b9d643e9-part-000"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "sparkgate-loadtest-sparkgate-ai-sparkgate-loadtest-96b8b9d643e9"}
+2026-09-02T18:11:25Z	INFO	controller.gateway	annotating pod	{"namespace": "envoy-gateway-system", "name": "envoy-sparkgate-loadtest-sparkgate-loadtest-sparkgate-96b8nsfzs"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "sparkgate-loadtest-sparkgate-ai-sparkgate-loadtest"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "sparkgate-loadtest-sparkgate-ai-sparkgate-loadtest-96b8b9d643e9-part-000"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "sparkgate-loadtest-sparkgate-ai-sparkgate-loadtest-96b8b9d643e9"}
+2026-09-02T18:11:25Z	INFO	controller.gateway	annotating pod	{"namespace": "envoy-gateway-system", "name": "envoy-sparkgate-loadtest-sparkgate-loadtest-sparkgate-96b8nsfzs"}
+2026-09-02T18:11:25Z	INFO	controller.secret	Reconciling Secret	{"namespace": "envoy-gateway-system", "name": "sparkgate-loadtest-sparkgate-ai-sparkgate-loadtest"}
+2026-09-02T18:11:27Z	INFO	envoy-gateway-extension-server	LoadAssignment is nil, setting cluster-level metadata	{"cluster_name": "httproute/sparkgate-loadtest/sparkgate-ai-3/rule/11/backend/0"}
+panic: runtime error: index out of range [2] with length 2
+
+goroutine 696 [running]:
+github.com/envoyproxy/ai-gateway/internal/extensionserver.(*Server).maybeModifyCluster(0x2ce9bf04a230, {0x3091c20, 0x2ce9c04a39b0}, 0x2ce9bfbfd8c8)
+	/home/runner/work/ai-gateway/ai-gateway/internal/extensionserver/post_translate_modify.go:381 +0x2012
+github.com/envoyproxy/ai-gateway/internal/extensionserver.(*Server).PostTranslateModify(0x2ce9bf04a230, {0x3091c20, 0x2ce9c04a39b0}, 0x2ce9bf609200)
+	/home/runner/work/ai-gateway/ai-gateway/internal/extensionserver/post_translate_modify.go:103 +0xbf
+github.com/envoyproxy/gateway/proto/extension._EnvoyGatewayExtension_PostTranslateModify_Handler({0x2e5c9e0, 0x2ce9bf04a230}, {0x3091c20, 0x2ce9c04a39b0}, 0x2ce9bf47f000, 0x0)
+	/home/runner/go/pkg/mod/github.com/envoyproxy/gateway@v1.8.1/proto/extension/service_grpc.pb.go:322 +0x1a6
+google.golang.org/grpc.(*Server).processUnaryRPC(0x2ce9bf7a4008, {0x3091c20, 0x2ce9bf9eb0e0}, 0x2ce9bfcb2d00, 0x2ce9bf478690, 0x4ee4678, 0x0)
+	/home/runner/go/pkg/mod/google.golang.org/grpc@v1.82.1/server.go:1443 +0x11dc
+google.golang.org/grpc.(*Server).handleStream(0x2ce9bf7a4008, {0x30948b8, 0x2ce9c0735040}, 0x2ce9bfcb2d00)
+	/home/runner/go/pkg/mod/google.golang.org/grpc@v1.82.1/server.go:1858 +0xae6
+google.golang.org/grpc.(*Server).serveStreams.func2.1()
+	/home/runner/go/pkg/mod/google.golang.org/grpc@v1.82.1/server.go:1078 +0x7f
+created by google.golang.org/grpc.(*Server).serveStreams.func2 in goroutine 668
+	/home/runner/go/pkg/mod/google.golang.org/grpc@v1.82.1/server.go:1089 +0x11d

@@ -1,0 +1,28 @@
+apiVersion: gateway.envoyproxy.io/v1alpha1
+kind: Backend
+metadata:
+  creationTimestamp: "2026-09-02T18:10:09Z"
+  generation: 1
+  labels:
+    sparkgate.dev/managed-by: envoy-crd-sync
+    sparkgate.dev/org-id: stbXLpWlUO3n52ABYK_2V
+    sparkgate.dev/provider: dgx-spark
+    sparkgate.dev/provider-key-id: 10AuQNh8P9tyVNCezrGp
+  name: pgk-geyec5krjzudqubzor4vmtsdmv5her3ql4
+  namespace: sparkgate-loadtest
+  resourceVersion: "3287078"
+  uid: e704bd6b-767f-4bd0-899b-6bd82e14734b
+spec:
+  endpoints:
+  - ip:
+      address: 192.168.111.10
+      port: 8000
+  type: Endpoints
+status:
+  conditions:
+  - lastTransitionTime: "2026-09-02T18:10:10Z"
+    message: The Backend was accepted
+    observedGeneration: 1
+    reason: Accepted
+    status: "True"
+    type: Accepted
