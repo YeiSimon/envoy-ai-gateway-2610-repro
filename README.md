@@ -4,6 +4,30 @@ Reproduction evidence for [envoyproxy/ai-gateway#2610](https://github.com/envoyp
 ("panic: index out of range in `maybeModifyCluster`'s default (non-split)
 `LoadAssignment` loop"), captured live on a real staging cluster.
 
+## Why we hit this
+
+This isn't a contrived edge case exercising an undocumented field. `priority`
+on `AIGatewayRouteRule.BackendRefs` is Envoy AI Gateway's own documented
+mechanism for backend failover — straight from the upstream API type
+(`api/v1alpha1/ai_gateway_route.go`):
+
+```go
+// Priority is the priority of the backend. This sets the priority on the underlying endpoints.
+// See: https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/load_balancing/priority
+// Note: This will override the `fallback` property of the underlying Envoy Gateway Backend
+Priority *uint32 `json:"priority,omitempty"`
+```
+
+We use it exactly as documented: multiple `provider_key`s registered for the
+same model get ranked by `priority` so a request automatically falls back to
+the next one if a higher-priority backend is unavailable. The bug means
+that the moment this mechanism is actually needed — a failover candidate
+becoming unreachable, which is the entire point of ranking backends by
+priority — the control plane panics and crash-loops instead of falling
+back. This isn't limited to our specific setup: any AI Gateway user
+following the documented priority-based failover pattern is exposed to
+this the moment one of their ranked backends goes down.
+
 ## Environment
 
 - `ai-gateway-controller`: `v1.1.0` (official, unpatched)
