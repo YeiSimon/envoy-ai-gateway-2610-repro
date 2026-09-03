@@ -28,6 +28,37 @@ back. This isn't limited to our specific setup: any AI Gateway user
 following the documented priority-based failover pattern is exposed to
 this the moment one of their ranked backends goes down.
 
+### This isn't specific to 3 backends, or to self-hosted `Backend`s
+
+Two things worth ruling out explicitly, since it's easy to assume either:
+
+**Not a backend-count threshold.** `AIGatewayRouteRule.BackendRefs` allows
+up to 128 entries (`+kubebuilder:validation:MaxItems=128`,
+`api/v1alpha1/ai_gateway_route.go`). We happened to configure 3
+(`index [2] with length 2`), but #2611's own regression test reproduces
+the identical panic with only **2** backendRefs
+(`index [1] with length 1`). The bug fires whenever
+`len(backendRefs) > len(LoadAssignment.Endpoints)`, regardless of which
+specific count that is — 2, 3, or higher.
+
+**Not specific to generic self-hosted `Backend`s vs. named cloud
+providers.** `AWSBedrock`, `Azure`, `OpenAI`, etc. are just values of
+`AIServiceBackend.spec.schema.name` — every one of them still wraps the
+same underlying `gateway.envoyproxy.io` `Backend` object. Envoy AI
+Gateway's own official failover example,
+[`examples/provider_fallback/base.yaml`](https://github.com/envoyproxy/ai-gateway/blob/main/examples/provider_fallback/base.yaml),
+demonstrates this exact pattern already: `priority: 0` is a `Backend`
+deliberately made to fail (a stub upstream forced into a TLS handshake
+failure), `priority: 1` is a real `AWSBedrock`-schema `Backend` pointing
+at `bedrock-runtime.us-east-1.amazonaws.com`. Our repro is structurally
+the same shape as that official example — the only difference is the
+*kind* of failure: their demo's backend is reachable but fails at the TLS
+layer (which still yields a `LoadAssignment.Endpoints` entry, so it
+doesn't hit #2610), while ours is completely unreachable (which doesn't
+yield one at all). Any priority-ranked backend of any schema type,
+official or self-hosted, hits this the moment it becomes fully
+unreachable rather than merely erroring.
+
 ## Environment
 
 - `ai-gateway-controller`: `v1.1.0` (official, unpatched)
